@@ -64,7 +64,6 @@ def predict():
     prediction = list(clf.predict(scaled_payload))
     LOG.info("Prediction: \n%s", prediction)
     # TO DO:  Log the output prediction value
-    LOG.info(f"Prediction  Log: \n{prediction}")
     LOG.info(f"POST /predict HTTP/1.1 200 -")
     return jsonify({'prediction': prediction})
     
